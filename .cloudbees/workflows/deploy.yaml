@@ -136,8 +136,8 @@ jobs:
               DATABASE_SSL: "disable"
             secretEnv:
               DATABASE_URL: ${{ toJSON(secrets.DATABASE_URL) }}
-              ANTHROPIC_API_KEY: ${{ toJSON(secrets.ANTHROPIC_API_KEY) }}
-              VOYAGE_API_KEY: ${{ toJSON(secrets.VOYAGE_API_KEY) }}
+              ANTHROPIC_API_KEY: ${{ toJSON(secrets.ANTHROPIC_API_KEY != 'unset' && secrets.ANTHROPIC_API_KEY || '') }}
+              VOYAGE_API_KEY: ${{ toJSON(secrets.VOYAGE_API_KEY != 'unset' && secrets.VOYAGE_API_KEY || '') }}
               # `unset` is the sentinel for "no SDK key yet": Unify refuses to
               # store an empty variable value, so attendees cannot leave this
               # blank before Module 07. Map it to an empty string, or the SDK
