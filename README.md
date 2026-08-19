@@ -1,6 +1,6 @@
 # recall-ai-service
 
-Recall Advisor AI service. Internal only. Owns the recall.recallAdvisor flag gate.
+Recall Advisor AI service. A backend service with no public route. Owns the recall.recallAdvisor flag gate.
 
 One of five components of the Product Recall Tracker. Start at the
 [hands-on lab](https://github.com/cloudbees/recall-tracker-hands-on-lab) rather than here.
