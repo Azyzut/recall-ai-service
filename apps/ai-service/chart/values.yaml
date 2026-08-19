@@ -20,6 +20,8 @@ env:
 # they do not appear in `kubectl get deployment -o yaml`. Supply at deploy time
 # with --set-string, or point existingSecret at a Secret managed elsewhere.
 secretEnv:
+  # openFDA API key. Blank means unauthenticated: 1,000 requests/day per IP.
+  FDA_API_KEY: ""
   DATABASE_URL: ""
   ANTHROPIC_API_KEY: ""
   VOYAGE_API_KEY: ""
